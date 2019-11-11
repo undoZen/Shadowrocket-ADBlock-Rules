@@ -14,7 +14,8 @@ confs_names = [
     'sr_adb',
     'sr_direct_banad',
     'sr_proxy_banad',
-    'sr_cnip', 'sr_cnip_ad'
+    'sr_cnip', 'sr_cnip_ad',
+    'sr_backcn', 'sr_backcn_ad'
 ]
 
 
@@ -36,6 +37,8 @@ def getRulesStringFromFile(path, kind):
                 prefix = 'IP-CIDR'
                 if '/' not in content:
                     content += '/32'
+            elif '.' not in content:
+                prefix = 'DOMAIN-KEYWORD'
 
             ret += prefix + ',%s,%s\n' % (content, kind)
 
@@ -52,14 +55,17 @@ values = {}
 
 values['build_time'] = time.strftime("%Y-%m-%d %H:%M:%S")
 
-values['top500_proxy'] = getRulesStringFromFile('resultant/top500_proxy.list', 'Proxy')
+values['top500_proxy']  = getRulesStringFromFile('resultant/top500_proxy.list', 'Proxy')
 values['top500_direct'] = getRulesStringFromFile('resultant/top500_direct.list', 'Direct')
 
 values['ad'] = getRulesStringFromFile('resultant/ad.list', 'Reject')
 
 values['manual_direct'] = getRulesStringFromFile('manual_direct.txt', 'Direct')
-values['manual_proxy'] = getRulesStringFromFile('manual_proxy.txt', 'Proxy')
+values['manual_proxy']  = getRulesStringFromFile('manual_proxy.txt', 'Proxy')
 values['manual_reject'] = getRulesStringFromFile('manual_reject.txt', 'Reject')
+
+values['gfwlist'] = getRulesStringFromFile('resultant/gfw.list', 'Proxy') \
+                  + getRulesStringFromFile('manual_gfwlist.txt', 'Proxy')
 
 
 # make confs

@@ -1,5 +1,14 @@
 # 手工定义的 Proxy 列表
 
+theinitium.com
+
+youtu.be
+
+netflix.com
+
+#161 可能以后会和GFWList重复
+9gag.com
+
 #Telegram
 67.198.55.0/24
 91.108.4.0/22
@@ -13,9 +22,6 @@
 149.154.168.0/22
 149.154.172.0/22
 
-#28 for http://www.bbc.com/zhongwen/simp
-bbc.com
-
 #instagram
 cdninstagram.com
 
@@ -24,14 +30,17 @@ disquscdn.com
 
 gist.github.com
 
-# 首页直连，但中文的维基百科必须翻墙
-wikipedia.org
+# 首页直连，但子域名需翻墙
+onedrive.live.com
 
 #20 开车
 t66y.com
 91porn.com
 
-#50 for whatsapp
+#132
+feedly.com
+
+#50 whatsapp
 whatsapp.com
 whatsapp.net
 18.194.0.0/15
@@ -50,5 +59,58 @@ thestandnews.com
 # 手机 smtp 和 imap 需要用到
 gmail.com
 
-#72 Google Voice
-74.125.23.127
+#72 #112 Google Voice
+74.125.0.0/16
+
+#85（可能冗余）
+yt3.ggpht.com
+www-google-analytics.l.google.com
+ssl-google-analytics.l.google.com
+partnerad.l.google.com
+pagead.l.google.com
+pagead.google.com
+pagead-tpc.l.google.com
+mobileads.google.com
+ads.google.com
+afd.l.google.com
+
+#175 华尔街邮报
+dowjones.com
+
+#159
+thetvdb.com
+
+#180 OneDrive（可能冗余）
+bcbits.com
+ogma.iad.appboy.com
+odc.officeapps.live.com
+skyapi.live.net
+centralus1.mediap.svc.ms
+dm.files.1drv.com
+mobile.pipe.aria.microsoft.com
+gate.hockeyapp.net
+skyapi.live.net
+api.onedrive.com
+vortex.data.microsoft.com
+
+#183
+mendeley.com
+
+#192 播客收听应用程序 overcast
+overcast.fm
+
+#205 APPLE NEWS
+news-events.apple.com
+news-edge.apple.com
+apple.comscoreresearch.com
+play.itunes.apple.com
+play-cdn.itunes-apple.com.akadns.net
+ls.apple.com
+cvws.apple-dns.net
+news.apple-dns.net
+gateway.fe.apple-dns.net
+akamaiedge.net
+gs-loc.apple.com
+bag.itunes.apple.com
+apple.news
+news.iadsdk.apple.com

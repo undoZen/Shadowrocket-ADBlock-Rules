@@ -4,7 +4,6 @@
 # 不包含广告过滤
 #
 
-
 GEOIP,CN,DIRECT
 
 FINAL,proxy
